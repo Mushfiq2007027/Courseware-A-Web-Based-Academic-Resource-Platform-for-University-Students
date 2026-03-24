@@ -1,4 +1,4 @@
-# Courseware: A Web-Based Academic Resource Platform for University Student
+# Courseware: A Web-Based Academic Resource Platform for University Students
 
 ---
 
@@ -15,30 +15,28 @@
 
 ## Motivation
 
-In academic settings, students often face challenges in keeping up with classroom learning due to unavoidable circumstances such as illness, emergencies, or scheduling conflicts. As a result, they may miss important lectures, which directly impacts their understanding of course content. Additionally, in complex or concept-heavy subjects, students often struggle to retain everything taught in class and find themselves needing to revisit topics at a later time.
+Academic continuity is a persistent challenge in higher education environments. Students frequently encounter unavoidable circumstances — such as illness, personal emergencies, or timetable conflicts — that prevent regular class attendance, resulting in critical gaps in their understanding of course content. Furthermore, even students who attend consistently often require opportunities to revisit complex or concept-intensive material outside the classroom to consolidate their learning.
 
-While platforms like YouTube and other online resources offer some support, they are not always aligned with the specific course structure, syllabus, and academic expectations of an institution. These general-purpose resources may lack the depth, accuracy, or contextual relevance required for academic success.
+General-purpose platforms such as YouTube, while broadly accessible, are not designed to align with the specific syllabi, pedagogical structure, or academic standards of individual institutions. Consequently, students relying on such resources may encounter material that lacks the necessary depth, contextual accuracy, or curricular relevance required for academic success.
 
-To bridge this gap and establish a more structured, syllabus-oriented academic support system, this dedicated academic courseware platform has been developed. The system allows students to revisit lecture videos, access course descriptions, review learning outcomes, and download additional study materials — including **previous year questions** and **course lecture PDFs** — all aligned with their specific curriculum.
-
-By providing consistent and centralized access to academic materials, the platform helps students learn at their own pace and ensures they remain aligned with classroom teaching, even when absent.
+This platform was developed to address these limitations by providing a structured, institution-aligned academic support system. It enables students to revisit recorded lecture videos, consult course descriptions and learning outcomes, and access supplementary study materials — including previous year examination papers and course lecture PDFs — all curated in direct accordance with their academic curriculum. By centralizing these resources within a single platform, the system promotes self-paced learning and ensures consistent academic alignment, regardless of attendance.
 
 ---
 
 ## Project Description
 
-This is a **full-stack academic courseware system** built using the **MERN stack** (MongoDB, Express.js, React, Node.js), along with **Tailwind CSS** and **shadcn/ui** for modern, responsive UI components.
+Courseware is a full-stack academic resource platform developed using the **MERN stack** (MongoDB, Express.js, React, Node.js), with **Tailwind CSS** and **shadcn/ui** employed for the construction of a modern, fully responsive user interface.
 
-The system consists of two major modules:
+The system is organized into two primary functional modules:
 
-- **Student Module**
-- **Admin (Instructor) Module**
+- **Student Module** — Provides authenticated access to courses, lecture content, and downloadable academic materials.
+- **Admin (Instructor) Module** — Enables instructors to manage course content, user accounts, and supplementary resource uploads through a centralized dashboard.
 
 ---
 
 ## Project Demo
 
-A full walkthrough of the platform is available in the video linked below:
+A comprehensive walkthrough of the platform's features and functionality is available via the link below:
 
 **[Watch Project Demo](https://youtu.be/nnCBeL0TI-c)**
 
@@ -48,40 +46,40 @@ A full walkthrough of the platform is available in the video linked below:
 
 ### Authentication
 
-- Combined Login and Signup page where new users can register and subsequently log in.
+- A unified Login and Registration page allows new users to create an account and authenticate in a streamlined workflow.
 
 ### All Courses Page
 
-- Displays all available courses across eight semesters in a clean, organized layout.
+- Presents a complete listing of all available courses spanning eight semesters, organized in a structured and visually consistent layout.
 
 ### Filter Course Page
 
-Students can filter courses based on the following criteria:
+Courses can be filtered according to the following criteria:
 
 - **Category:** Departmental or Non-departmental
 - **Type:** Theoretical or Sessional
-- **Year-Semester:** From 1st Year – 1st Semester to 4th Year – 2nd Semester
+- **Year-Semester:** Ranging from 1st Year – 1st Semester through 4th Year – 2nd Semester
 
-A "No Course Found" message is displayed if no course matches the selected criteria.
+A "No Course Found" message is rendered when no course satisfies the active filter conditions.
 
 ### Course Details Page
 
-Each course detail page displays the following:
+Each course page presents the following structured information:
 
 - Course Description
-- Course Outcomes
-- List of available Lectures
+- Course Learning Outcomes
+- A complete listing of associated lectures
 
 ### Lecture Playback
 
-- Students can watch lecture videos streamed from **Cloudinary**, using video IDs stored in **MongoDB**.
+- Lecture videos are delivered via streaming from **Cloudinary**, with corresponding video identifiers retrieved from **MongoDB** to ensure efficient and reliable media delivery.
 
 ### Additional Learning Resources
 
-Two dedicated resource sections are accessible via header navigation buttons:
+Two dedicated resource sections are accessible through the main navigation header:
 
-- **Previous Year Questions:** Browse and view past exam papers in PDF format.
-- **Course Materials:** Access and download lecture slides, notes, and other PDFs.
+- **Previous Year Questions:** Allows students to browse and view archived examination papers in PDF format.
+- **Course Materials:** Provides access to downloadable lecture slides, notes, and supplementary academic documents.
 
 ---
 
@@ -89,45 +87,48 @@ Two dedicated resource sections are accessible via header navigation buttons:
 
 ### User Management
 
-- Displays a table of all registered users with their names and email addresses.
-- Administrators can delete user accounts if necessary.
+- Presents a structured table of all registered users, displaying names and associated email addresses.
+- Administrators are authorized to remove user accounts as required.
 
 ### Course Management
 
-- View, edit, or delete existing courses.
-- A **Create New Course** button initiates a guided 3-step course creation workflow.
+- Allows administrators to view, modify, or permanently remove existing courses from the platform.
+- A **Create New Course** action initiates a structured, three-step course creation workflow.
 
 #### Course Creation Workflow (3-Step Form)
 
-**Step 1 — Course Curriculum Page**
-- Bulk upload, delete, or replace lecture videos.
-- Videos are uploaded to **Cloudinary**, with public IDs saved in **MongoDB**.
+**Step 1 — Course Curriculum**
+
+- Supports bulk upload, replacement, and deletion of lecture video files.
+- Videos are stored on **Cloudinary**, with their corresponding public identifiers persisted in **MongoDB**.
 
 **Step 2 — Course Landing Page**
-- Enter course metadata including:
+
+- Captures all essential course metadata, including:
   - Course Number (e.g., CSE 3200)
-  - Title, Credit, Subtitle, Description, Outcomes, and Welcome Message
-  - Category, Type, and Year-Semester selection
+  - Title, Credit Hours, Subtitle, Description, Learning Outcomes, and Welcome Message
+  - Classification fields: Category, Type, and Year-Semester
 
-**Step 3 — Course Settings Page**
-- Upload a course thumbnail image, stored in Cloudinary and linked via MongoDB.
+**Step 3 — Course Settings**
 
-> **Note:** All fields must be completed before a new course can be submitted.
+- Facilitates the upload of a course thumbnail image, which is stored on Cloudinary and referenced within the MongoDB document.
+
+> **Note:** Submission of a new course requires all fields across all three steps to be fully completed.
 
 ---
 
 ### PDF Upload for Additional Resources
 
-Two extra dashboard buttons are available to instructors:
+The administrator dashboard provides two dedicated resource management sections:
 
 - **Course Materials**
 - **Previous Year Questions**
 
-Clicking either button redirects to a dedicated management page where instructors can:
+Each section provides a self-contained management interface through which instructors can:
 
-- Upload PDFs via **Multer** (stored locally on the server)
-- View uploaded PDFs in a structured table
-- Delete PDFs when no longer needed
+- Upload PDF documents via **Multer**, with files persisted to local server storage
+- Review all uploaded files in a structured tabular view
+- Remove individual files when they are no longer required
 
 ---
 
@@ -200,7 +201,7 @@ Clicking either button redirects to a dedicated management page where instructor
 **Screenshot 9: Admin Dashboard**
 
 <div style="text-align:center; margin-bottom: 40px;">
-  <img src="https://github.com/user-attachments/assets/d6b6a089-a4be-492a1-91bb-37e540321a8b" alt="Admin Dashboard" width="700" style="border:2px solid #000000; border-radius:8px; padding:6px; background:white; display:inline-block;" />
+  <img src="https://github.com/user-attachments/assets/d6b6a089-a4be-492a-91bb-37e540321a8b" alt="Admin Dashboard" width="700" style="border:2px solid #000000; border-radius:8px; padding:6px; background:white; display:inline-block;" />
 </div>
 
 ---
